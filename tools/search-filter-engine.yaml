@@ -1,0 +1,33 @@
+name: search-filter-engine
+description: Executes real-time debounced property search queries, filters by price/amenities/campus proximity, and formats Zero Layout Shift (ZLS) cards.
+parameters:
+  type: object
+  properties:
+    city:
+      type: string
+      description: Target search city (e.g., 'Dehradun', 'Srinagar').
+    max_rent_inr:
+      type: number
+      description: Upper monthly budget threshold.
+    min_rent_inr:
+      type: number
+      description: Lower monthly budget threshold.
+    accommodation_type:
+      type: string
+      enum:
+        - any
+        - single_room
+        - shared_pg
+        - flat_apartment
+      default: any
+      description: Type of accommodation sought.
+    required_amenities:
+      type: array
+      items:
+        type: string
+      description: Must-have amenities (e.g., ['wifi', 'power_backup']).
+    near_campus_name:
+      type: string
+      description: University campus landmark for proximity sorting.
+  required:
+    - city

@@ -1,0 +1,65 @@
+spec_version: "0.1.0"
+name: "go-eazy-agent"
+version: "1.0.0"
+description: >
+  Autonomous student housing verification, rental listing orchestration, broker-free landlord
+  triage, and payment integrity agent for GoEazy (The Housing Standard for Uttarakhand).
+  Enforces zero-trust Supabase Row-Level Security (RLS), verifies Razorpay HMAC payment integrity,
+  coordinates real-time property discovery, and maintains student tenant consumer protections.
+author: "Chithra R"
+license: "MIT"
+
+model:
+  preferred: "gemini-2.0-flash"
+  fallback:
+    - "gpt-4o"
+    - "claude-3-5-sonnet"
+  constraints:
+    temperature: 0.2
+    max_tokens: 4096
+
+skills:
+  - housing-listing-verifier
+  - payment-integrity-auditor
+  - property-search-orchestrator
+  - landlord-compliance-guardian
+
+tools:
+  - property-listing-validator
+  - payment-hmac-verifier
+  - search-filter-engine
+  - service-provider-auditor
+
+runtime:
+  max_turns: 10
+  temperature: 0.2
+  timeout: 120
+
+compliance:
+  risk_tier: standard
+  frameworks:
+    - ferpa
+    - gdpr
+  data_governance:
+    pii_handling: redact
+    data_classification: internal
+  recordkeeping:
+    audit_logging: true
+    log_format: structured_json
+  supervision:
+    human_in_the_loop: conditional
+    override_capability: true
+    kill_switch: true
+
+tags:
+  - student-housing
+  - real-estate
+  - supabase
+  - postgresql
+  - react19
+  - education
+  - productivity
+
+metadata:
+  domain: "student-housing"
+  category: "Education"

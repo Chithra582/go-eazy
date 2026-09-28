@@ -1,0 +1,58 @@
+name: property-listing-validator
+description: Validates property listing submissions for direct landlord authenticity, complete student amenities, and unwatermarked photos.
+parameters:
+  type: object
+  properties:
+    title:
+      type: string
+      description: Headline of the property listing.
+    address:
+      type: string
+      description: Physical street address of the accommodation.
+    city:
+      type: string
+      enum:
+        - Dehradun
+        - Srinagar
+        - Roorkee
+        - Pantnagar
+        - Other
+      description: Target student city in Uttarakhand.
+    monthly_rent_inr:
+      type: number
+      description: Monthly rental fee in Indian Rupees.
+    security_deposit_inr:
+      type: number
+      description: Required refundable security deposit.
+    accommodation_type:
+      type: string
+      enum:
+        - single_room
+        - shared_pg
+        - flat_apartment
+      description: Configuration of the property.
+    amenities:
+      type: array
+      items:
+        type: string
+        enum:
+          - wifi
+          - water_24_7
+          - power_backup
+          - mess_food
+          - heating
+          - laundry
+          - study_table
+      description: Amenities included in the accommodation.
+    photo_urls:
+      type: array
+      items:
+        type: string
+      description: List of uploaded room image URLs.
+  required:
+    - title
+    - address
+    - city
+    - monthly_rent_inr
+    - accommodation_type
+    - photo_urls

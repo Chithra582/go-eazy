@@ -1,0 +1,26 @@
+name: payment-hmac-verifier
+description: Validates Razorpay callback signatures using SHA-256 HMAC and cross-checks transaction fees before activating property listings.
+parameters:
+  type: object
+  properties:
+    razorpay_order_id:
+      type: string
+      description: Unique order ID issued by Razorpay.
+    razorpay_payment_id:
+      type: string
+      description: Payment transaction ID returned upon charge.
+    razorpay_signature:
+      type: string
+      description: Hex-encoded HMAC SHA-256 signature from payment payload.
+    amount_paid_inr:
+      type: number
+      description: Total amount charged to the landlord.
+    expected_amount_inr:
+      type: number
+      default: 199.00
+      description: Expected listing activation fee.
+  required:
+    - razorpay_order_id
+    - razorpay_payment_id
+    - razorpay_signature
+    - amount_paid_inr

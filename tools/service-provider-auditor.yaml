@@ -1,0 +1,30 @@
+name: service-provider-auditor
+description: Audits local student service provider documentation, evaluates FSSAI food certificates, and compiles admin review dossiers.
+parameters:
+  type: object
+  properties:
+    provider_name:
+      type: string
+      description: Name of the business or contractor.
+    service_category:
+      type: string
+      enum:
+        - mess_tiffin
+        - laundry
+        - room_cleaning
+        - electric_plumbing
+      description: Service domain.
+    fssai_license_number:
+      type: string
+      description: Food safety license number (required for mess/tiffin services).
+    identity_proof_url:
+      type: string
+      description: Uploaded government ID document URL.
+    contact_phone:
+      type: string
+      description: Contact phone number for verification.
+  required:
+    - provider_name
+    - service_category
+    - identity_proof_url
+    - contact_phone

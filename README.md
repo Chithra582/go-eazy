@@ -1,5 +1,12 @@
 # GoEazy | The Housing Standard for Uttarakhand 🏔️
 
+<p align="left">
+  <a href="agent.yaml"><img src="https://img.shields.io/badge/OpenGAP-0.1.0-blue.svg" alt="OpenGAP Spec"></a>
+  <a href="https://app.hidevs.xyz/passport/submit"><img src="https://img.shields.io/badge/GitAgent%20Passport-Ready-green.svg" alt="GitAgent Passport Ready"></a>
+  <a href="agent.yaml"><img src="https://img.shields.io/badge/Category-Education-purple.svg" alt="Category Education"></a>
+  <a href="EXPLAINABILITY.md"><img src="https://img.shields.io/badge/Compliance-FERPA%20%7C%20GDPR-orange.svg" alt="Compliance FERPA | GDPR"></a>
+</p>
+
 **GoEazy** is a premium, high-performance real estate ecosystem tailored for students and professionals. Born out of the struggle to find quality housing in Dehradun and Srinagar, it combines a **Red Dot award-tier aesthetic** with **industrial-grade engineering**.
 
 ---
@@ -158,8 +165,30 @@ Everyone.
 
 Students
 Developers
-Designers
-Technical Writers
+---
+
+## 🤖 GitAgent Passport Qualification
+
+This repository is compliant with the **OpenGAP Spec 0.1.0** standard and qualified for the [HiDevs GitAgent Passport](https://app.hidevs.xyz/passport/submit).
+
+### Clearance Checkpoints Summary
+
+| Checkpoint | Status | Focus Area | Artifact |
+| :--- | :--- | :--- | :--- |
+| **Checkpoint 1: Validate** | `PASSED` | Schema, Soul, Skills, Tools | [`agent.yaml`](agent.yaml), [`SOUL.md`](SOUL.md), [`skills/`](skills/), [`tools/`](tools/) |
+| **Checkpoint 2: Explain** | `PASSED` | Decision Logic, Data Usage, Limitations | [`EXPLAINABILITY.md`](EXPLAINABILITY.md) |
+| **Checkpoint 3: Export** | `PASSED` | Interoperability & Tool Schemas | [`tools/`](tools/), [`RULES.md`](RULES.md), [`DUTIES.md`](DUTIES.md) |
+
+### Agent Architecture Overview
+
+- **Identity & Ethics**: [`SOUL.md`](SOUL.md) defines core behavioral traits, broker-free marketplace advocacy, anti-fraud pledge, and student tenant protections.
+- **Operational Rules**: [`RULES.md`](RULES.md) establishes absolute constraints against commercial brokerage, enforces Razorpay HMAC signature checks, zero-trust Supabase RLS, and FERPA/GDPR compliance.
+- **Role Duties**: [`DUTIES.md`](DUTIES.md) defines step-by-step responsibilities across listing intake, server-side payment verification, debounced search indexing, and service provider auditing.
+- **Transparent Reasoning**: [`EXPLAINABILITY.md`](EXPLAINABILITY.md) documents step-by-step rationale, payment verification formulas, trust scoring models, and operational boundaries.
+- **Modular Skills**: Located in [`skills/`](skills/) for housing verification, payment auditing, search orchestration, and landlord compliance guardianship.
+- **Tool Schemas**: Standardized JSON schemas located in [`tools/`](tools/) for listing validation, HMAC verification, search filtering, and service auditing.
+
+---
 
 ## Getting Started
 
